@@ -36,7 +36,7 @@ class Boot extends Loggable {
     LiftRules.httpAuthProtectedResource.prepend{
       case (Req("securepage":: Nil,_,_)) => Full(AuthRole("admin"))
      // case (Req("index1":: Nil,_,_)) => Full(AuthRole("admin"))
-       case (Req("detail":: Nil,_,_)) => Full(AuthRole("admin"))
+      // case (Req("detail":: Nil,_,_)) => Full(AuthRole("admin"))
     }
 
     LiftRules.authentication = HttpBasicAuthentication("Authenticate Yourself") {
